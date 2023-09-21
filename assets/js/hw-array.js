@@ -117,7 +117,7 @@ if (index !== -1) {
 console.table(indexDefine);
 
 // // 12. *Перевірити, чи всі елементи масиву є парними числами. // every
-
+// -------------------------------------------------------------------------------------
 const arrOfValue = [12, 18, 42, 33, 1, 25];
 
 const arrToCheck = arrOfValue.every((item) => item % 2 === 0);
@@ -126,6 +126,21 @@ console.log("Array elements paired :>> ", arrToCheck);
 
 // (* або простими числами)
 
+function isPrime(number) {
+  if (number <= 1);
+  if (number === 2);
+
+  const sqrtNum = Math.sqrt(number);
+  for (let i = 2; i <= sqrtNum; i++) {
+    if (number % i === 0) return false;
+  }
+  return true;
+}
+
+const allSimple = arrOfValue.every((number) => isPrime(number));
+console.log("Array elements simple number :>> ", allSimple);
+
+// --------------------------------------------------------------------------------------
 // // 13. *Перевірити, чи є у масиві бодай один від'ємний елемент. // some
 
 const arrNumber = [16, 88, 54, -8, 44];
