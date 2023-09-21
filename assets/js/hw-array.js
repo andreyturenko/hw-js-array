@@ -61,18 +61,20 @@ for (let i = 0; i < evenNumbers.length; i++) {
 // // 6. Вивести індекси нульових елементів (елемент дорівнює нулю).
 
 console.log("Zero index elements :>> ", evenNumbers[0]);
+// ----------------------------------------------------------------------------------------
 
 // // 7. Підрахувати кількість нульових елементів (елемент дорівнює нулю).
 
-const zeroCounts = 0;
+const numbElements = [10, 0, 17, 0, 100];
 
-for (let i = 0; i < evenNumbers; i++) {
-  if (evenNumbers[i] === 0) {
+let zeroCounts = 0;
+
+for (let i = 0; i < numbElements.length; i++) {
+  if (numbElements[i] === 0) {
     zeroCounts++;
   }
 }
 console.log("Amount zero elements :>> ", zeroCounts);
-// ----------------------------------------------------------------------------------------
 
 // // // Методи перебору масивів (forEach, filter, map, findIndex, *some, *every):
 // // // 8. Отримати новий масив із заданого, який міститиме лише ненульові числа
