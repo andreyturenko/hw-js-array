@@ -22,7 +22,7 @@ console.table(numRandoms);
 const varArrays = [100, 200, 300, 400, 500, 600];
 
 varArrays.pop();
-// varArrays.shift(); - Reduces performance, not recommended for use
+// varArrays.shift(); // - Reduces performance, not recommended for use
 varArrays.splice(0, 1);
 varArrays.unshift(10);
 varArrays.push(700);
@@ -80,60 +80,56 @@ console.log("Amount zero elements :>> ", zeroCounts);
 // // // 8. Отримати новий масив із заданого, який міститиме лише ненульові числа
 // // //    (-1, 5, 0, 9, -10 => -1, 5, 9, -10). // filter
 
-const arrNonZeros = [-1, 5, 0, 9, -10];
+const arrNonZero = [-1, 5, 0, 9, -10];
 
-const newNonZero = arrNonZeros.filter((arrNonZeros) => arrNonZeros !== 0);
+const newNonZero = arrNonZero.filter((item) => item !== 0);
 console.table(newNonZero);
 
 // // 9. Отримати новий масив із заданого, який міститиме всі елементи вихідного,
 // // // поділені на 100 (99, 5, 0, 9, 30 => 0.99, 0.05, 0, 0.09, 0.3). // map
 
-const arrDivides = [99, 5, 0, 9, 30];
+const arrDivide = [99, 5, 0, 9, 30];
 
-const newArrDivide = arrDivides.map((arrDivides) => arrDivides / 100);
+const newArrDivide = arrDivide.map((item) => item / 100);
 console.table(newArrDivide);
 
 // // 10. Вивести елементи масиву, зведені у куб. // forEach
 
-const arrIsCubes = [2, 3, 4, 5, 6, 7, 8, 9, 10];
+const isCube = [2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-arrIsCubes.forEach(function (arrIsCubes) {
-  const accuCub = arrIsCubes ** 3;
-  console.log(accuCub);
+isCube.forEach(function (item) {
+  const inCube = item ** 3;
+  console.log(inCube);
 });
 
 // // 11. Визначити індекс елемента, квадрат якого дорівнює 100, і видалити його,
 // // //  або видати діагностичне повідомлення, якщо такого елементу не існує. // findIndex
 
-const indexDefines = [60, 100, 10, 188];
+const indexDefine = [60, 100, 10, 188];
 
-const index = indexDefines.findIndex(
-  (indexDefines) => indexDefines ** 2 === 100
-);
+const index = indexDefine.findIndex((item) => item ** 2 === 100);
 
 if (index !== -1) {
-  indexDefines.splice(index, 1);
+  indexDefine.splice(index, 1);
 } else {
   console.log("There is not such element");
 }
-console.table(indexDefines);
+console.table(indexDefine);
 
 // // 12. *Перевірити, чи всі елементи масиву є парними числами. // every
-// ---------------------------------------------------------------------------------------
-const arrOfValues = [12, 18, 42, 33, 1, 25];
 
-const arrToCheck = arrOfValues.every((arrOfValues) => arrOfValues % 2 === 0);
+const arrOfValue = [12, 18, 42, 33, 1, 25];
+
+const arrToCheck = arrOfValue.every((item) => item % 2 === 0);
 
 console.log("Array elements paired :>> ", arrToCheck);
 
 // (* або простими числами)
 
-// ---------------------------------------------------------------------------------------
-
 // // 13. *Перевірити, чи є у масиві бодай один від'ємний елемент. // some
 
-const arrNumbers = [16, 88, 54, -8, 44];
+const arrNumber = [16, 88, 54, -8, 44];
 
-const negativeNumber = arrNumbers.some((arrNumbers) => arrNumbers < 0);
+const negativeNumber = arrNumber.some((item) => item < 0);
 
 console.log("Negative number :>> ", negativeNumber);
