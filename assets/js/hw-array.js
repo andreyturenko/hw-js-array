@@ -41,7 +41,7 @@ console.log("Copy of the array :>> ", copyVarArrays === varArrays);
 // // // Не використовувати методи перебору масивів (forEach, filter, map, findIndex), а використати цикли:
 // // 4. Вивести елементи з парними індексами.
 
-for (let i = 0; i < varArrays.length; i++) {
+for (let i = 0; i < varArrays.length; i += 2) {
   if (i % 2 === 0) {
     console.log("Elements with even indexes :>> ", varArrays[i]);
   }
@@ -127,8 +127,8 @@ console.log("Array elements paired :>> ", arrToCheck);
 // (* або простими числами)
 
 function isPrime(number) {
-  if (number <= 1);
-  if (number === 2);
+  if (number <= 1) return false;
+  if (number === 2) return true;
 
   const sqrtNum = Math.sqrt(number);
   for (let i = 2; i <= sqrtNum; i++) {
