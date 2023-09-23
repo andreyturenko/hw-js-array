@@ -42,9 +42,7 @@ console.log("Copy of the array :>> ", copyVarArrays === varArrays);
 // // 4. Вивести елементи з парними індексами.
 
 for (let i = 0; i < varArrays.length; i += 2) {
-  if (i % 2 === 0) {
-    console.log("Elements with even indexes :>> ", varArrays[i]);
-  }
+  console.log("Elements with even indexes :>> ", varArrays[i]);
 }
 // -----------------------------------------------------------------------------------------
 
